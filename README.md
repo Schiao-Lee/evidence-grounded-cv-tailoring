@@ -52,6 +52,23 @@ Each job runs Steps 0→9.5: parse JD → select content → render → keyword 
 **deterministic QA gate** → subset audit → phone-prep. An agent that can read/write
 files and run a terminal (e.g. Claude Code) orchestrates and executes it.
 
+## Results (author's own use)
+
+I built this for my own job search. The numbers below are my real usage —
+aggregate only, no employer details:
+
+- **Before** (Sep 2025 – end of May 2026, ~9 months, by hand): **~100 applications**
+  → 7 interviews, 2 screening calls, ~4–5 online assessments.
+- **With this workflow** (early June 2026 – now, **~2.5 weeks**): **150 applications**
+  → 4 interviews, 2 screening calls, 2 online assessments — and the response funnel
+  is still young.
+
+The solid, honest takeaway is **throughput**: ~150 tailored, QA-passed applications
+in two-and-a-bit weeks versus ~100 in nine months (~20× the pace), with early
+response signal already on par. Two weeks is too short to claim a better conversion
+*rate* — the point is that the gates let me move fast **without** lowering the
+truthfulness bar.
+
 ## What's in here
 
 ```
