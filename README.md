@@ -1,5 +1,9 @@
 # CV Tailoring Workflow Kit
 
+[![CI](https://github.com/Schiao-Lee/evidence-grounded-cv-tailoring/actions/workflows/ci.yml/badge.svg)](https://github.com/Schiao-Lee/evidence-grounded-cv-tailoring/actions/workflows/ci.yml)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+
 > 🇨🇳 第一次用、想要中文上手指南?看 **[START_HERE_zh.md](START_HERE_zh.md)**。
 
 A human-in-the-loop workflow that turns **your master CV + a job description**
@@ -144,7 +148,18 @@ python3 tools/jd_autosplit.py examples/toy_jds/linkedin_dump_example.txt --dry-r
 
 Working prototype / portfolio case study. The single-job and batch pipelines run
 end to end (verified: synthetic master CV compiles clean, all profile-driven gates
-pass). Possible next steps: tests + CI, a thin Python runner, more role-family bases.
+pass), with unit tests + CI. Possible next steps: a thin Python runner and more
+role-family bases.
+
+## Development
+
+```bash
+pip install pyyaml pytest
+pytest -q                    # unit tests (profile loader, redaction scanner)
+python tools/redact_scan.py  # privacy scan — must be clean before publishing
+```
+
+CI (GitHub Actions) runs the privacy scan, the tests, and a syntax check on every push.
 
 ## License
 

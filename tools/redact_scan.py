@@ -81,7 +81,7 @@ def main():
         if any(part in SKIP_DIRS for part in rel.parts):
             continue
         if not args.include_examples and (
-            (rel.parts and rel.parts[0] == "examples") or ".example." in path.name
+            (rel.parts and rel.parts[0] in ("examples", "tests")) or ".example." in path.name
         ):
             continue
         if path.suffix.lower() in SKIP_SUFFIXES or path.name == ".DS_Store":
