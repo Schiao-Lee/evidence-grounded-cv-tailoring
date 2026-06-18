@@ -6,8 +6,16 @@
   <title>Evidence-Grounded CV Tailoring — AI that won't lie on your résumé</title>
   <meta name="description" content="A human-in-the-loop AI workflow that tailors a CV to a job — designed so it can't fabricate. Anti-hallucination rules, 13 deterministic QA gates, LaTeX rendering." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://schiao-lee.github.io/evidence-grounded-cv-tailoring/" />
   <meta property="og:title" content="Evidence-Grounded CV Tailoring" />
   <meta property="og:description" content="An AI CV-tailoring workflow designed so it can't fabricate: subset & gap rules, 13 deterministic QA gates, LaTeX rendering, resumable batch mode." />
+  <meta property="og:image" content="https://schiao-lee.github.io/evidence-grounded-cv-tailoring/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Evidence-Grounded CV Tailoring" />
+  <meta name="twitter:description" content="An AI CV-tailoring workflow designed so it can't fabricate." />
+  <meta name="twitter:image" content="https://schiao-lee.github.io/evidence-grounded-cv-tailoring/og-image.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -99,15 +107,9 @@
         <div class="layer"><span class="layer-tag">Decision</span> JD parsing, content selection under the subset rule, gap-list generation — saved to a decision trace.</div>
         <div class="layer"><span class="layer-tag">Presentation</span> a LaTeX visual system (dense / balanced profiles).</div>
       </div>
-      <div class="pipeline">
-        <span>Parse JD</span><span>→</span>
-        <span>Select content</span><span>→</span>
-        <span>Render (LaTeX)</span><span>→</span>
-        <span>Keyword gate</span><span>→</span>
-        <span class="pl-hot">QA gate</span><span>→</span>
-        <span>Subset audit</span><span>→</span>
-        <span>Phone-prep</span>
-      </div>
+      <figure class="arch-fig">
+        <img class="arch" src="architecture.svg" alt="Architecture: evidence sources feed the tailoring pipeline, which renders via LaTeX and is gated by 13 deterministic QA checks before output." />
+      </figure>
     </section>
 
     <section class="section section-results">

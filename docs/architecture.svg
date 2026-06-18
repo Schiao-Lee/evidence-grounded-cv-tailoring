@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 472" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-label="Architecture: evidence sources feed a tailoring pipeline, gated by deterministic QA before output">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#1F4E79"/>
+    </marker>
+  </defs>
+
+  <!-- stage labels -->
+  <g fill="#5b6770" font-size="12" font-weight="700" letter-spacing="1">
+    <text x="16" y="55">EVIDENCE</text>
+    <text x="16" y="151">DECISION</text>
+    <text x="16" y="240">RENDER</text>
+    <text x="16" y="335">QA&#160;GATE</text>
+    <text x="16" y="432">OUTPUT</text>
+  </g>
+
+  <!-- connectors -->
+  <g stroke="#1F4E79" stroke-width="2" marker-end="url(#arrow)">
+    <line x1="505" y1="78" x2="505" y2="113"/>
+    <line x1="505" y1="174" x2="505" y2="205"/>
+    <line x1="505" y1="262" x2="505" y2="293"/>
+    <line x1="505" y1="364" x2="505" y2="397"/>
+  </g>
+
+  <!-- S1 evidence -->
+  <g>
+    <rect x="140" y="24" width="230" height="52" rx="10" fill="#f6f8fb" stroke="#d2dae4"/>
+    <rect x="385" y="24" width="230" height="52" rx="10" fill="#f6f8fb" stroke="#d2dae4"/>
+    <rect x="630" y="24" width="230" height="52" rx="10" fill="#f6f8fb" stroke="#d2dae4"/>
+    <g fill="#16202b" font-size="15" text-anchor="middle">
+      <text x="255" y="55">profile.yaml</text>
+      <text x="500" y="55">master CV</text>
+      <text x="745" y="55">project bank</text>
+    </g>
+  </g>
+
+  <!-- S2 decision -->
+  <rect x="140" y="113" width="720" height="61" rx="10" fill="#eaf0f6" stroke="#c4d2e0"/>
+  <text x="500" y="139" fill="#16202b" font-size="15.5" font-weight="600" text-anchor="middle">Tailor pipeline — parse JD · select content under the subset rule · build GAP_LIST</text>
+  <text x="500" y="160" fill="#5b6770" font-size="12.5" text-anchor="middle">saves decision_trace.json · only facts from Evidence may be used</text>
+
+  <!-- S3 render -->
+  <rect x="290" y="205" width="420" height="52" rx="10" fill="#f6f8fb" stroke="#d2dae4"/>
+  <text x="500" y="236" fill="#16202b" font-size="15" text-anchor="middle">Render · LaTeX template (dense / balanced)</text>
+
+  <!-- S4 QA gate (highlighted) -->
+  <rect x="250" y="293" width="500" height="68" rx="10" fill="#1F4E79"/>
+  <text x="500" y="322" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">QA gate — 13 deterministic checks</text>
+  <text x="500" y="345" fill="#ffd98a" font-size="13" text-anchor="middle">blocks &#8220;done&#8221; until all pass (exit 0)</text>
+
+  <!-- S5 output -->
+  <g>
+    <rect x="140" y="397" width="230" height="52" rx="10" fill="#f6f8fb" stroke="#d2dae4"/>
+    <rect x="385" y="397" width="230" height="52" rx="10" fill="#f6f8fb" stroke="#d2dae4"/>
+    <rect x="630" y="397" width="230" height="52" rx="10" fill="#f6f8fb" stroke="#d2dae4"/>
+    <g fill="#16202b" font-size="15" text-anchor="middle">
+      <text x="255" y="428">Tailored PDF</text>
+      <text x="500" y="428">Report + trace</text>
+      <text x="745" y="428">Phone-prep</text>
+    </g>
+  </g>
+</svg>

@@ -54,6 +54,20 @@ Each job runs Steps 0→9.5: parse JD → select content → render → keyword 
 **deterministic QA gate** → subset audit → phone-prep. An agent that can read/write
 files and run a terminal (e.g. Claude Code) orchestrates and executes it.
 
+```mermaid
+flowchart TD
+  subgraph E["Evidence — what may be said"]
+    direction LR
+    P["profile.yaml"]
+    M["master CV"]
+    B["project bank"]
+  end
+  E --> D["Decision: parse JD, select under the subset rule, build GAP_LIST"]
+  D --> R["Render · LaTeX template (dense / balanced)"]
+  R --> G{{"QA gate — 13 deterministic checks · blocks 'done' until all pass"}}
+  G --> O["Output: tailored PDF · report + decision_trace · phone-prep"]
+```
+
 ## Results (author's own use)
 
 I built this for my own job search. The numbers below are my real usage —

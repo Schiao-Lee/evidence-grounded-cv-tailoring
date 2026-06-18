@@ -184,6 +184,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
   border-color: var(--blue) !important;
   font-weight: 700;
 }
+.arch-fig { margin: 22px 0 0; }
+.arch { display: block; width: 100%; max-width: 720px; height: auto; margin: 0 auto; }
 
 /* ---------- results ---------- */
 .results-grid {
