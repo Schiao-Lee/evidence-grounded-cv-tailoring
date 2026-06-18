@@ -4,6 +4,8 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)
 
+**🌐 Project page:** https://schiao-lee.github.io/evidence-grounded-cv-tailoring/
+
 > 🧭 New here? A gentle, non-technical walkthrough: **[START_HERE_en.md](START_HERE_en.md)** (English) · **[START_HERE_zh.md](START_HERE_zh.md)** (中文)
 
 A human-in-the-loop workflow that turns **your master CV + a job description**

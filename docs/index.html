@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evidence-Grounded CV Tailoring — AI that won't lie on your résumé</title>
+  <meta name="description" content="A human-in-the-loop AI workflow that tailors a CV to a job — designed so it can't fabricate. Anti-hallucination rules, 13 deterministic QA gates, LaTeX rendering." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Evidence-Grounded CV Tailoring" />
+  <meta property="og:description" content="An AI CV-tailoring workflow designed so it can't fabricate: subset & gap rules, 13 deterministic QA gates, LaTeX rendering, resumable batch mode." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="nav">
+      <span class="brand">evidence-grounded-cv-tailoring</span>
+      <a class="nav-link" href="https://github.com/Schiao-Lee/evidence-grounded-cv-tailoring">GitHub ↗</a>
+    </nav>
+
+    <div class="hero-inner">
+      <p class="eyebrow">Human-in-the-loop · open source · MIT</p>
+      <h1>An AI workflow for tailoring your CV<br />— designed so it <em>can't</em> fabricate.</h1>
+      <p class="lede">
+        Most "AI résumé" tools will happily invent skills to match a job. This one does the
+        opposite: every line is true and traceable, and a missing requirement becomes an
+        honest <strong>gap</strong> — never a made-up bullet.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://github.com/Schiao-Lee/evidence-grounded-cv-tailoring">View the code</a>
+        <a class="btn btn-ghost" href="https://github.com/Schiao-Lee/evidence-grounded-cv-tailoring/blob/main/START_HERE_en.md">Start-here guide</a>
+      </div>
+    </div>
+
+    <div class="stat-banner">
+      <div class="stat">
+        <span class="stat-num">~100</span>
+        <span class="stat-cap">applications in 9 months, by hand</span>
+      </div>
+      <div class="stat-arrow">→</div>
+      <div class="stat">
+        <span class="stat-num">150</span>
+        <span class="stat-cap">in ~2.5 weeks, with this workflow</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">~20×</span>
+        <span class="stat-cap">the pace — without lowering the honesty bar</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>The idea</h2>
+      <p class="prose">
+        AI is great at rewriting — and great at quietly overstating. This project treats
+        truthfulness as an engineering constraint, not a hope. The CV is tailored <em>down</em>
+        from a master profile you control, and a deterministic gate refuses to call anything
+        "done" until every claim checks out. It makes honest tailoring <strong>faster</strong>,
+        not looser.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Honest by design</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Subset rule</h3>
+          <p>The tailored CV may contain <em>only</em> facts already in your master profile. Nothing new is ever invented to match a job.</p>
+        </div>
+        <div class="card">
+          <h3>Gap rule</h3>
+          <p>If the job needs something you don't have, it's logged as an explicit gap — surfaced honestly, never fabricated.</p>
+        </div>
+        <div class="card">
+          <h3>13 deterministic QA gates</h3>
+          <p>A Python gate — not the model's word — verifies every number traces to source, contact / education / languages stay intact, no filler slips in, and layout holds.</p>
+        </div>
+        <div class="card">
+          <h3>Config-as-data</h3>
+          <p>Zero personal facts in code. One <code>profile.yaml</code> drives every personalized check, so the same engine fits anyone.</p>
+        </div>
+        <div class="card">
+          <h3>Verification-first</h3>
+          <p>Real XeLaTeX compile + PDF / coverage audits, run for real — no "compiled successfully" claims without the command output.</p>
+        </div>
+        <div class="card">
+          <h3>Your data stays local</h3>
+          <p>The workflow runs on your machine. Nothing is uploaded. The examples shipped in the repo are entirely synthetic.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How it works</h2>
+      <p class="prose">Three deliberately separated layers, so no single prompt owns everything:</p>
+      <div class="layers">
+        <div class="layer"><span class="layer-tag">Evidence</span> master CV + project bank + evidence map — what may be said.</div>
+        <div class="layer"><span class="layer-tag">Decision</span> JD parsing, content selection under the subset rule, gap-list generation — saved to a decision trace.</div>
+        <div class="layer"><span class="layer-tag">Presentation</span> a LaTeX visual system (dense / balanced profiles).</div>
+      </div>
+      <div class="pipeline">
+        <span>Parse JD</span><span>→</span>
+        <span>Select content</span><span>→</span>
+        <span>Render (LaTeX)</span><span>→</span>
+        <span>Keyword gate</span><span>→</span>
+        <span class="pl-hot">QA gate</span><span>→</span>
+        <span>Subset audit</span><span>→</span>
+        <span>Phone-prep</span>
+      </div>
+    </section>
+
+    <section class="section section-results">
+      <h2>Results (author's own use)</h2>
+      <div class="results-grid">
+        <div class="result-block">
+          <h4>Before — 9 months, by hand</h4>
+          <p class="result-big">~100 applications</p>
+          <p class="result-sub">7 interviews · 2 screening calls · ~4–5 online assessments</p>
+        </div>
+        <div class="result-block result-after">
+          <h4>With this workflow — ~2.5 weeks</h4>
+          <p class="result-big">150 applications</p>
+          <p class="result-sub">4 interviews · 2 screening calls · 2 online assessments — funnel still young</p>
+        </div>
+      </div>
+      <p class="caveat">
+        The solid takeaway is <strong>throughput</strong>: ~20× the pace, with early response
+        signal already on par. Two weeks is too short to claim a better conversion <em>rate</em> —
+        the point is moving fast <strong>without</strong> lowering the truthfulness bar.
+      </p>
+    </section>
+
+    <section class="section section-cta">
+      <h2>Take a look</h2>
+      <p class="prose">Working prototype · MIT licensed · all examples synthetic.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://github.com/Schiao-Lee/evidence-grounded-cv-tailoring">GitHub repository</a>
+        <a class="btn btn-ghost" href="https://github.com/Schiao-Lee/evidence-grounded-cv-tailoring/blob/main/README.md">Read the docs</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built by <a href="https://github.com/Schiao-Lee">Schiao-Lee</a> · MIT License · A case study in keeping AI-generated documents truthful and verifiable.</p>
+  </footer>
+
+</body>
+</html>
