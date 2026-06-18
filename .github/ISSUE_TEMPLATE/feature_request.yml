@@ -1,0 +1,42 @@
+name: Feature request
+description: Suggest an improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please keep suggestions aligned with truthful, evidence-grounded CV tailoring. This project should not help fabricate experience.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      placeholder: It is hard to...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: Add a deterministic check that...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Documentation
+        - QA gate
+        - Prompt workflow
+        - Batch mode
+        - Templates / rendering
+        - Role-family bases
+        - Privacy / redaction
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

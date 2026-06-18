@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Start-here guide
+    url: https://github.com/Schiao-Lee/evidence-grounded-cv-tailoring/blob/main/START_HERE_en.md
+    about: Read this first if you are setting up the workflow.
+  - name: Project page
+    url: https://schiao-lee.github.io/evidence-grounded-cv-tailoring/
+    about: Overview of the project and its design goals.

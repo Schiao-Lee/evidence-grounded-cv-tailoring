@@ -187,7 +187,7 @@ role-family bases.
 ## Development
 
 ```bash
-pip install pyyaml pytest
+pip install -r requirements-dev.txt
 pytest -q                    # unit tests (profile loader, redaction scanner)
 python tools/redact_scan.py  # privacy scan — must be clean before publishing
 ```

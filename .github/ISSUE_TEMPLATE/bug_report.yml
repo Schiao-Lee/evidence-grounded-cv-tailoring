@@ -1,0 +1,46 @@
+name: Bug report
+description: Report something broken or confusing.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include real CVs, phone numbers, emails, employer-specific application details, or private job-search notes.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug using synthetic or redacted data.
+      placeholder: The QA gate failed even though...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Use the synthetic examples if possible.
+      placeholder: |
+        1. Run ...
+        2. Open ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, and relevant tools.
+      placeholder: macOS, Python 3.12, XeLaTeX ..., poppler ...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Paste command output only after removing private data.
+      render: shell
