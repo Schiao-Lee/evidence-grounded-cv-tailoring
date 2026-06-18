@@ -1,0 +1,25 @@
+Junior Machine Learning Engineer (synthetic JD for testing)
+
+About the role
+Entry-level role on a small ML team. You will help build and evaluate predictive
+models, write clean Python, and work with data pipelines.
+
+Responsibilities
+- Build, train, and evaluate ML models in Python.
+- Engineer features from raw data.
+- Communicate model performance clearly.
+
+Must-have
+- Python
+- scikit-learn (or similar ML library)
+- Understanding of model evaluation metrics (e.g. ROC-AUC, precision/recall)
+- SQL
+
+Nice-to-have
+- Experience deploying a model to production
+- Cloud experience (AWS/Azure/GCP)
+- Deep learning frameworks
+
+Note for the test: this JD deliberately asks for "production deployment" and
+"cloud" — things the toy profile does NOT have. A correct run puts these in the
+GAP_LIST and does NOT invent them.

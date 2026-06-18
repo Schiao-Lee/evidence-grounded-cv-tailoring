@@ -1,0 +1,24 @@
+Junior Data Analyst — Commercial Insights (synthetic JD for testing)
+
+About the role
+We are looking for a junior data analyst to support our commercial team with
+reporting and ad-hoc analysis. You will build and maintain dashboards, write SQL
+to pull data, and present findings clearly to non-technical stakeholders.
+
+Responsibilities
+- Build and maintain Power BI dashboards and weekly reports.
+- Write SQL queries to extract and transform data for analysis.
+- Track KPIs and explain changes to regional managers.
+- Document data models and reporting logic.
+
+Must-have
+- Power BI (or similar BI tool)
+- SQL
+- Excel
+- Clear communication with non-technical stakeholders
+- A portfolio or project demonstrating dashboards/reporting
+
+Nice-to-have
+- Python for data analysis
+- Experience with retail or commercial data
+- DAX / Power Query

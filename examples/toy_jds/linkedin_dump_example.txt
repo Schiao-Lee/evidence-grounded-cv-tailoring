@@ -1,0 +1,37 @@
+Jobs
+
+ACME Analytics
+Junior Data Analyst
+Kraków, Poland · 17 hours ago · 15 applicants
+Apply
+Saved
+Hybrid · Full-time · Internship
+Use AI to assess how you fit
+Meet the hiring team
+People you can reach out to
+About the job
+We are looking for a junior data analyst to support our commercial team with
+reporting and ad-hoc analysis.
+Responsibilities:
+- Build and maintain Power BI dashboards and weekly reports.
+- Write SQL queries to extract and transform data.
+- Present findings to non-technical stakeholders.
+Must-have: Power BI, SQL, Excel.
+Nice-to-have: Python, DAX.
+28924
+
+Globex Corporation
+Machine Learning Intern
+Warsaw, Poland · 3 days ago · 40 applicants
+Apply
+Easy Apply
+Remote · Full-time
+Show more
+About the job
+Join our small ML team to build and evaluate predictive models.
+Responsibilities:
+- Train and evaluate ML models in Python.
+- Engineer features from raw data.
+Must-have: Python, scikit-learn, model evaluation metrics, SQL.
+Nice-to-have: production deployment, cloud (AWS/Azure/GCP).
+17112

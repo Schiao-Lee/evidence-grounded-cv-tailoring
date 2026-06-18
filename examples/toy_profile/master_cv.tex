@@ -1,0 +1,60 @@
+% SYNTHETIC master CV for the fictional ALEX KOWALSKI.
+% This is the SUPERSET — tailoring cuts DOWN from it; never add beyond it.
+% Compile with: xelatex master_cv.tex
+\documentclass[10pt,a4paper]{article}
+\newcommand{\CVStyleProfile}{balanced}
+\input{../../templates/cv_style_classic_blue.tex}
+
+\begin{document}
+
+\namestyle{ALEX KOWALSKI}
+\headline{Data Analyst — BI, reporting, and applied analytics}
+\contactline{(+48) 600-100-200 \;|\; \href{mailto:alex.kowalski@example.com}{alex.kowalski@example.com} \;|\; Warsaw, Poland}
+\contactline{\href{https://www.linkedin.com/in/alex-kowalski-example/}{LinkedIn} \;|\; \href{https://github.com/alex-kowalski-example}{GitHub}}
+
+\section{Summary}
+Data analyst with hands-on experience building Power BI dashboards, writing SQL,
+and turning messy operational data into decisions stakeholders actually use.
+Comfortable across the analytics stack, from data prep to clear reporting.
+
+\section{Experience}
+% ROLE_TAGS: data-analyst-bi, business-strategy
+\entry{ACME Analytics}{Jun 2023 -- Sep 2023}{Data Analyst Intern}{Krak\'ow, Poland}
+\begin{cvitems}
+  \item Rebuilt a weekly sales report as a Power BI dashboard, cutting refresh time by \hl{40\%}.
+  \item Wrote SQL queries against a 12{,}000-row transactions table to track KPIs for 3 regional managers.
+  \item Documented the data model so the report could be maintained after the internship.
+\end{cvitems}
+
+\section{Projects}
+% ROLE_TAGS: data-analyst-bi
+\project{Retail Sales Power BI Dashboard}{}{Power BI, DAX, Power Query, Excel}
+\begin{cvitems}
+  \item Modeled 18 months of retail data into a star schema with DAX measures for revenue and margin.
+\end{cvitems}
+
+% ROLE_TAGS: data-analyst-bi, data-science-ml
+\project{City Bike-Share Demand Analysis}{}{Python, pandas, matplotlib}
+\begin{cvitems}
+  \item Analyzed 200{,}000 trip records to explain demand peaks by hour, weather, and station.
+\end{cvitems}
+
+% ROLE_TAGS: data-science-ml
+\project{Customer Churn Prediction Model}{}{Python, scikit-learn}
+\begin{cvitems}
+  \item Built a logistic-regression churn classifier reaching \hl{82\%} ROC-AUC on a held-out set (course project).
+\end{cvitems}
+
+\section{Technical Skills}
+\skillline{BI \& Visualization}{Power BI, DAX, Power Query, Excel}
+\skillline{Programming \& Data}{Python (pandas, scikit-learn), SQL}
+\skillline{Databases}{PostgreSQL, SQLite}
+
+\section{Education}
+\entry{University of Warsaw}{Oct 2024 -- Expected Sep 2026}{MSc, Data Science \& Business Analytics}{Warsaw, Poland}
+\entry{Jagiellonian University}{Oct 2020 -- Jun 2024}{BA, Economics}{Krak\'ow, Poland}
+
+\section{Languages}
+English (C1) \dotsep Polish (Native) \dotsep German (B1)
+
+\end{document}

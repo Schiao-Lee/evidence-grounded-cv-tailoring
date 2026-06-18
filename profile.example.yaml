@@ -1,0 +1,63 @@
+# =====================================================================
+# profile.yaml — YOUR immutable facts. Fill this once.
+#
+# This is the ONE file that turns the kit into "yours". Every personal
+# fact the QA gate and prompts need lives here — nothing personal is
+# hardcoded in the scripts.
+#
+# 1. Copy this file to `profile.yaml` (same folder).
+# 2. Replace every value with your own true facts.
+# 3. Never put anything here you cannot back up with real evidence.
+#
+# The QA gate (tools/qa_one_job.py) reads this file to build its
+# contact / education / languages checks. The prompts read it for your
+# header block and your personal "caution list".
+# =====================================================================
+
+candidate:
+  name: "ALEX KOWALSKI"                 # shown in the CV header (any case)
+  phone_display: "(+48) 600-100-200"    # how it should render on the CV
+  phone_digits: "600 100 200"           # digits only — used by the QA regex
+  email: "alex.kowalski@example.com"
+  location: "Warsaw, Poland"
+  linkedin: "https://www.linkedin.com/in/alex-kowalski-example/"
+  github: "https://github.com/alex-kowalski-example"
+
+education:
+  # The canonical degree line. The QA gate FAILS if institution + degree
+  # are missing from the compiled PDF, so keep this exactly as it should read.
+  institution: "University of Warsaw"
+  degree: "MSc, Data Science & Business Analytics"
+  dates: "Oct 2024 -- Expected Sep 2026"
+  # Optional earlier degree (may be dropped on a one-page CV):
+  prior_institution: "Jagiellonian University"
+  prior_degree: "BA, Economics"
+  prior_dates: "Oct 2020 -- Jun 2024"
+
+languages:
+  # The QA gate checks that EVERY language+level pair below appears in the PDF.
+  # List exactly the languages you will claim — no more, no fewer.
+  - { name: "English",  level: "C1" }
+  - { name: "Polish",   level: "Native" }
+  - { name: "German",   level: "B1" }
+
+# Languages you do NOT speak but that look similar / get over-claimed.
+# These become forbidden phrases so a draft can never silently add them.
+language_exclusions:
+  - "Spanish"
+  - "French"
+
+# Your personal anti-hallucination caution list. One line per immutable
+# fact the AI must never drift on (dates, employment boundaries, what was a
+# prototype vs production, etc.). The toy values below are EXAMPLES — replace
+# them. If you have nothing here yet, BOOTSTRAP.md will interview you for it.
+caution_list:
+  - "Internship at ACME Analytics = Jun 2023 -- Sep 2023 (not 'Present')."
+  - "The recommender prototype was a course project, NOT a production system."
+  - "Do not claim cloud certifications that are not yet completed."
+
+paths:
+  # Relative to the kit root. Rename your real files to these or edit the paths.
+  master_cv:    "MASTER_CV/current/master_cv.tex"
+  project_bank: "MASTER_CV/project_bank/project_bank.md"
+  evidence_map: "MASTER_CV/checkpoints/evidence_map.md"

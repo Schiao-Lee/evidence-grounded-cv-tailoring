@@ -1,0 +1,26 @@
+# qa_one_job.py forbidden-phrase list (case-insensitive substring match on PDF text)
+# One phrase per line. Lines starting with # are comments.
+#
+# These are GENERIC failure phrases. They are safe defaults for anyone.
+# Languages you do NOT speak are handled separately via `language_exclusions`
+# in profile.yaml — you do not list them here.
+
+# --- confessional / self-undermining wording (an AI draft sneaks these in) ---
+ramp-up areas
+to confirm
+to be confirmed
+learning foundation
+still learning
+limited experience
+no formal experience
+basic understanding of
+familiar with the concept
+
+# --- vague proficiency wording that hides the real level ---
+Professional working proficiency
+
+# --- stale placeholder markers that must never reach a final PDF ---
+TODO_VERIFY
+TAILORING_NOTE
+TAILORING_OPTION
+PLACEHOLDER

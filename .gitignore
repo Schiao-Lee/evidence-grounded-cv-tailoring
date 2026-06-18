@@ -1,0 +1,34 @@
+# ---- YOUR private data: never commit ----
+profile.yaml
+MASTER_CV/current/*
+MASTER_CV/project_bank/*
+MASTER_CV/checkpoints/*
+JOB_APPLICATIONS/*
+!JOB_APPLICATIONS/_intake
+JOB_APPLICATIONS/_intake/*
+!JOB_APPLICATIONS/_intake/.gitkeep
+PHONE_INTERVIEW_PREP/*
+!MASTER_CV/current/.gitkeep
+!MASTER_CV/project_bank/.gitkeep
+!MASTER_CV/checkpoints/.gitkeep
+!PHONE_INTERVIEW_PREP/_TEMPLATE.md
+!PHONE_INTERVIEW_PREP/README.md
+
+# ---- LaTeX build noise ----
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- OS ----
+.DS_Store
+
+# NOTE: the examples/ folder is SYNTHETIC (fictional person) and is safe to keep.

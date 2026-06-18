@@ -1,0 +1,129 @@
+% =====================================================================
+% cv_style_classic_blue.tex
+% Reusable one-page/two-page CV visual system for tailored CVs.
+%
+% Purpose:
+% - Keep visual quality consistent across tailoring.
+% - The AI should fill CONTENT only; do not hand-tune margins/macros per job.
+% - Two density profiles are supported:
+%     \cvstyleprofile{dense}     -> compact but polished (technical roles).
+%     \cvstyleprofile{balanced}  -> more spacious, business-facing (stakeholder roles).
+%
+% Usage in a tailored CV preamble (path is relative to your kit root):
+%   \documentclass[10pt,a4paper]{article}
+%   \newcommand{\CVStyleProfile}{dense} % or balanced
+%   \input{../../templates/cv_style_classic_blue.tex}
+% =====================================================================
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{geometry}
+
+\setmainfont[Ligatures=NoCommon]{Helvetica Neue}
+\emergencystretch=2em
+\definecolor{cvblue}{HTML}{1F4E79}
+\definecolor{cvgray}{HTML}{555555}
+\definecolor{cvlight}{HTML}{777777}
+\definecolor{taggray}{HTML}{666666}
+\hypersetup{colorlinks=true,urlcolor=cvblue,linkcolor=cvblue}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ---------------------------------------------------------------------
+% Density profiles
+% ---------------------------------------------------------------------
+% Geometry must be resolved in the PREAMBLE. A \geometry call deferred to
+% \AtBeginDocument runs after the geometry package has already fixed the page
+% layout with its default (narrow) width; specifying left+right then becomes
+% over-determined, the default width is kept, and the ~92pt of slack is dumped
+% into the right margin (the 135pt right-whitespace bug). So split the profile:
+% geometry applies now; typography (font size + list spacing) is deferred,
+% because those lengths get reset by \normalsize at \begin{document}.
+\newcommand{\cvprofilegeometry}[1]{%
+  \edef\cvprofile{#1}%
+  \ifx\cvprofile\empty\def\cvprofile{dense}\fi
+  \def\balancedprofile{balanced}%
+  \ifx\cvprofile\balancedprofile
+    \geometry{top=0.66in,bottom=0.64in,left=0.70in,right=0.70in}%
+  \else
+    \geometry{top=0.54in,bottom=0.52in,left=0.60in,right=0.60in}%
+  \fi
+}
+\newcommand{\cvprofiletypography}[1]{%
+  \edef\cvprofile{#1}%
+  \ifx\cvprofile\empty\def\cvprofile{dense}\fi
+  \def\balancedprofile{balanced}%
+  \ifx\cvprofile\balancedprofile
+    % balanced: more spacious and business-facing.
+    \fontsize{10pt}{11.55pt}\selectfont
+    \setlength{\parskip}{1.7pt}%
+    \setlength{\leftmargini}{1.25em}%
+    \setlength{\topsep}{2.5pt}\setlength{\itemsep}{1.2pt}\setlength{\parsep}{0pt}%
+  \else
+    % dense: compact but still polished.
+    \fontsize{9.55pt}{10.75pt}\selectfont
+    \setlength{\parskip}{1.1pt}%
+    \setlength{\leftmargini}{1.18em}%
+    \setlength{\topsep}{1.6pt}\setlength{\itemsep}{0.35pt}\setlength{\parsep}{0pt}%
+  \fi
+}
+% Backward-compatible combined macro (geometry + typography in one call).
+\newcommand{\cvstyleprofile}[1]{\cvprofilegeometry{#1}\cvprofiletypography{#1}}
+
+% Use externally supplied \CVStyleProfile if present; otherwise dense.
+\providecommand{\CVStyleProfile}{dense}
+\cvprofilegeometry{\CVStyleProfile}
+\AtBeginDocument{\cvprofiletypography{\CVStyleProfile}}
+
+% ---------------------------------------------------------------------
+% Core visual hierarchy
+% ---------------------------------------------------------------------
+\newcommand{\namestyle}[1]{{\Huge\bfseries\color{cvblue}\addfontfeature{LetterSpace=8.0}#1}}
+\newcommand{\headline}[1]{{\small #1}\par}
+\newcommand{\contactline}[1]{{\small #1}\par}
+
+\let\oldsection\section
+\renewcommand{\section}[1]{%
+  \vspace{6.2pt}%
+  {\normalsize\bfseries\color{cvblue}\addfontfeature{LetterSpace=5.0}\MakeUppercase{#1}\par}%
+  \vspace{1.8pt}{\color{cvblue}\hrule height 0.45pt}\vspace{3.2pt}%
+}
+
+\let\oldsubsection\subsection
+\renewcommand{\subsection}[1]{\vspace{3pt}{\normalsize\bfseries\color{cvblue}#1\par}\vspace{1pt}}
+
+\newcommand{\hl}[1]{\textbf{#1}}
+\newcommand{\cvtag}[1]{\textcolor{taggray}{\scriptsize\texttt{#1}}}
+
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill\textcolor{cvgray}{#2}\\%
+  {\itshape\color{cvgray}#3}\hfill{\itshape\color{cvgray}#4}\par%
+}
+
+\newcommand{\project}[3]{%
+  \textbf{#1}\\[-1pt]%
+  {\itshape\color{cvgray}#3}\par%
+}
+
+\newcommand{\projectlink}[4]{%
+  \textbf{#1}\hfill\href{#2}{\textcolor{cvblue}{#3}}\\[-1pt]%
+  {\itshape\color{cvgray}#4}\par%
+}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}%
+    \setlength{\itemsep}{0.35pt}%
+    \setlength{\parskip}{0pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.6pt}%
+    \setlength{\leftmargin}{1.18em}%
+}{\end{itemize}}
+
+% Inline skills: preferred for one-page tailored CVs. Avoid wide tabular labels.
+\newcommand{\skillline}[2]{\textbf{\color{cvblue}#1:} #2\par}
+
+% Optional compact separator for final one-line sections.
+\newcommand{\dotsep}{\;\textbullet\;}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "purpose": "EXAMPLE role-family base (fictional). Copy to <family>.base.json and fill from YOUR master CV. Concrete jobs apply JD-specific overlays.",
+  "source_policy": "Use only your master tex, project_bank, and evidence_map. Missing JD terms go to GAP_LIST.",
+  "role_family": "data-analyst-bi",
+  "visual_profile": "dense",
+  "default_page_mode": "one-page",
+  "summary_source": "Summary Bank: Business Intelligence / Reporting",
+  "default_projects_ranked": [
+    "Retail Sales Power BI Dashboard",
+    "City Bike-Share Demand Analysis",
+    "Customer Churn Prediction Model"
+  ],
+  "default_experience": [
+    "ACME Analytics — Data Analyst Intern"
+  ],
+  "default_skill_rows": [
+    "BI & Visualization",
+    "Programming & Data",
+    "Databases",
+    "Languages"
+  ],
+  "common_keywords": [
+    "Power BI",
+    "SQL",
+    "Excel",
+    "dashboards",
+    "KPIs",
+    "data models",
+    "stakeholders",
+    "reporting"
+  ],
+  "common_gaps": [
+    "Tableau (if explicitly required and not source-backed)",
+    "Looker (if explicitly required and not source-backed)"
+  ],
+  "job_overlay_fields": [
+    "company",
+    "role",
+    "jd_must_have",
+    "jd_nice_to_have",
+    "summary_tweak",
+    "project_overrides",
+    "extra_gap_list"
+  ]
+}
